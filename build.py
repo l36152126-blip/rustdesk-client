@@ -183,7 +183,7 @@ def generate_build_script_for_docker():
             popd
             $VCPKG_ROOT/vcpkg install --x-install-root="$VCPKG_ROOT/installed"
             # build rustdesk
-            ./build.py --flutter --hwcodec
+            python3 ./build.py --flutter --hwcodec
         ''')
     system2("chmod +x /tmp/build.sh")
     system2("bash /tmp/build.sh")
